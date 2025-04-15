@@ -1,22 +1,18 @@
 #!/bin/bash
 
 # List of binaries (full paths or relative names)
-test_binary=./lab001
+test_binary=./output/lab001
 
 binaries=(
-  ./lab001
-  ./lab002
-  ./lab003
-  ./lab004
-  ./lab005
-  ./lab006
-  ./lab007
-  ./lab008
-  ./lab009
-  ./lab010
-  ./lab011
-  ./lab012
-  ./lab013
+  ./output/lab001
+  ./output/lab002
+  ./output/lab003
+  ./output/lab004
+  ./output/lab005
+  ./output/lab006
+  ./output/lab007
+  ./output/lab008
+  ./output/lab013
 )
 
 test_mode=false
@@ -51,6 +47,8 @@ fi
 
 # Script Logic
 echo "Building"
+rm -f lab??? *.data
+make
 
 # echo "Running: $chosen_binary"
 echo "Running random lab"
